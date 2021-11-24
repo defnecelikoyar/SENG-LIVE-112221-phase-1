@@ -127,9 +127,8 @@ console.log("------------------------");
 
     // 🚧 "time" will be a random number between 0 and 24
     // ____ time = Math.ceil(Math.random()*24);
-    // log a message to the console indicating whether "time" is in the AM or PM
-
-    // If "time" is less than or equal to 12...
+       // log a message to the console indicating whether "time" is in the AM or PM
+          // If "time" is less than or equal to 12...
     // if (❓) {
 
         // console.log(`${time} is in the AM.`)
@@ -140,10 +139,18 @@ console.log("------------------------");
         // console.log(`${time} is in the PM.`)
 
     // }
+    const time = Math.ceil(Math.random()*24);
+    if (time < 12) {
+        console.log(`${time} is in the AM.`)
+
+    } else {
+        console.log(`${time} is in the PM.`)
+
+    }
 
     // ✨ BONUS: Try refactoring the above expression using a ternary operator.
+console.log(`${time} is in the ${time < 12 ? "AM" : "PM"}`);
 
-    // 🚨 Be sure to comment out any code above before proceeding to the next activity.
 
 // 🚧 Break Out Activity 2: Using if...else if...else
 
@@ -165,7 +172,18 @@ console.log("------------------------");
     // ____ tomororow = new Date("2021-11-23");
     // ____ otherDate = yesterday;
 
+const today = new Date("2021-11-22");
+const yesterday = new Date("2021-11-21");
+const tomororow = new Date("2021-11-23");
+let otherDate = yesterday;
 
+if (otherDate < today) {
+    console.log('This date is in the past')
+} else if (otherDate > today) {
+    console.log('This date is in the future')
+} else {
+    console.log('This date is today!')
+};
 
 
     // 🚨 Format your if...else if...else conditional below
